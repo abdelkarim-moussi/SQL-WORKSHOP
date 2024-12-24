@@ -33,7 +33,38 @@ create table invoices(
    foreign key(id_apoin) references appointment(id_apoin)
    );
 
-   -- select appoitments of the patient with id = 2;
+
+--- insertion query 
+insert into users(firstname,lastname,user_type)
+values 
+('jhon','doe','doctor'),
+('jane','ryan','patient'),
+('demetry','jake','doctor'),
+('anne','white','patient'),
+('fredirick','tay','doctor'),
+('ryno','radolf','patient'),
+('makenzy','dwayne','patient'),
+('mary','demur','patient');
+
+-- insertion into invoices table 
+insert into invoices (id_apoin,amount,invoice_date)
+values 
+('8',230.25,'2024-12-24'),
+('10',400.00,'2024-12-25'),
+('11',1000.12,'2024-12-26'),
+('8',599.10,'2024-12-27'),
+('10',230.25,'2024-12-28');
+
+-- insert into appointment table
+insert into appointment(id_patient,id_doctor,date_apoin,status) 
+values
+(7,3,'2024-12-28','confirm');
+(4,1,'2024-12-28','confirm');
+(2,5,'2024-12-28','confirm');
+(8,5,'2024-12-28','confirm');
+
+
+-- select appoitments of the patient with id = 2;
 select * from appointment where id_patient = 2;
 
 -- select all appointment
